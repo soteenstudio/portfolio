@@ -70,8 +70,8 @@ export const heroStats: StatDef[] = [
 
 export const socialLinks: SocialLink[] = [
   { label: "LinkedIn", href: "#", icon: Linkedin },
-  { label: "GitHub", href: "#", icon: Github },
-  { label: "Instagram", href: "#", icon: Instagram },
+  { label: "GitHub", href: "https://github.com/soteenstudio", icon: Github },
+  { label: "Instagram", href: "https://instagram.com/soteenstudio", icon: Instagram },
 ];
 
 export const legalLinks: LegalLink[] = [
