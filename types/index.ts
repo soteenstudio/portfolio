@@ -65,3 +65,26 @@ export interface LegalLink {
   id: LegalId;
   href: string;
 }
+
+export interface CompanyFact {
+  id: FactId;
+  icon: LucideIcon;
+}
+
+export interface CoreValue {
+  id: ValueId;
+  icon: LucideIcon;
+}
+
+export interface Cta {
+  label: string;
+  href: string;
+}
+
+export interface FooterColumn {
+  title: string;
+  links: {
+    label: string;
+    href: string;
+  }[];
+}
