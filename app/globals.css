@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 9%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 38%;
+    --accent: 220 14% 95%;
+    --accent-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 9%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 172 66% 36%;
+    --radius: 0.875rem;
+
+    /* Warna brand SoTeen: ubah di sini untuk mengganti aksen seluruh situs */
+    --brand: 172 66% 38%;
+    --brand-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+    --primary: 210 40% 96%;
+    --primary-foreground: 222 47% 8%;
+    --secondary: 222 30% 12%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 18% 68%;
+    --accent: 222 30% 15%;
+    --accent-foreground: 210 40% 96%;
+    --popover: 222 40% 8%;
+    --popover-foreground: 210 40% 96%;
+    --border: 222 25% 18%;
+    --input: 222 25% 18%;
+    --ring: 172 66% 45%;
+
+    --brand: 172 66% 45%;
+    --brand-foreground: 222 47% 8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  ::selection {
+    background: hsl(var(--brand) / 0.2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-dots {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.18) 1px, transparent 1px);
+    background-size: 14px 14px;
+  }
+}
+
+/* Animasi muncul saat scroll. Dipicu oleh <ScrollReveal /> lewat atribut data-reveal.
+   Memakai properti `translate`/`scale` (bukan `transform`) dan `animation` agar tidak
+   bentrok dengan efek hover/transition yang sudah ada. Class `js` dipasang oleh skrip
+   di <head>, sehingga tanpa JavaScript konten tetap terlihat. */
+@keyframes reveal-up {
+  from { opacity: 0; translate: 0 28px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes reveal-left {
+  from { opacity: 0; translate: -32px 0; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes reveal-right {
+  from { opacity: 0; translate: 32px 0; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes reveal-scale {
+  from { opacity: 0; scale: 0.96; }
+  to { opacity: 1; scale: 1; }
+}
+@keyframes reveal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.js [data-reveal] {
+  opacity: 0;
+}
+
+.js [data-reveal].is-visible {
+  animation-name: reveal-up;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-delay: var(--reveal-delay, 0ms);
+  animation-fill-mode: both;
+}
+.js [data-reveal="left"].is-visible { animation-name: reveal-left; }
+.js [data-reveal="right"].is-visible { animation-name: reveal-right; }
+.js [data-reveal="scale"].is-visible { animation-name: reveal-scale; }
+.js [data-reveal="fade"].is-visible { animation-name: reveal-fade; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+  }
+  .js [data-reveal].is-visible {
+    animation: none;
+  }
+}
