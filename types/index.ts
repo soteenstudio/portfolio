@@ -67,12 +67,16 @@ export interface LegalLink {
 }
 
 export interface CompanyFact {
-  id: FactId;
-  icon: LucideIcon;
+  label: string;
+  value: string;
 }
 
+export type CoreValueId = ValueId | "clarity" | string;
+
 export interface CoreValue {
-  id: ValueId;
+  id: CoreValueId;
+  title: string;
+  description: string;
   icon: LucideIcon;
 }
 
@@ -87,4 +91,35 @@ export interface FooterColumn {
     label: string;
     href: string;
   }[];
+}
+
+export interface HeroStat {
+  value: string;
+  label: string;
+}
+
+export interface NavSubItem {
+  label: string;
+  href: string;
+  description?: string;
+}
+
+export interface NavItem {
+  label: string;
+  href?: string;
+  children?: NavSubItem[];
+}
+
+export interface Project {
+  id: string;
+  name: string;
+  category: string;
+  summary: string;
+  status: ProjectStatus;
+  href?: string;
+  icon?: LucideIcon;
+  featured?: boolean;
+  stack?: string[];
+  overview?: string | string[];
+  highlights?: string[];
 }
