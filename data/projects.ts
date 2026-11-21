@@ -31,6 +31,7 @@ export const projects: ProjectDef[] = [
       id: {
         name: "LightVM",
         category: "Runtime & Virtualisasi",
+        links: ["Repositori_GitHub https://github.com/soteenstudio/lightvm", "Dokumentasi https://lightvm.soteenstudio.my.id"],
         summary: "Mesin virtual berbasis Rust dengan eksekusi eksplisit, kontrol sumber daya terukur, dan pipeline terpisah dari resolusi simbol hingga validasi dan benchmarking.",
         overview: [
           "LightVM adalah mesin virtual yang dibangun di atas Rust dengan pendekatan eksekusi langsung tanpa keajaiban tersembunyi, jejak memori yang dijaga tetap ringkas, serta batas keamanan dan kuota yang diatur secara eksplisit oleh host. Alur kerjanya memisahkan proses inti dan utilitas pendukung agar setiap tahap tetap jelas dan terkendali.",
@@ -45,6 +46,7 @@ export const projects: ProjectDef[] = [
       en: {
         name: "LightVM",
         category: "Runtime & Virtualization",
+        links: ["GitHub_Repository https://github.com/soteenstudio/lightvm", "Documentation https://lightvm.soteenstudio.my.id"],
         summary: "A Rust-based virtual machine with explicit execution, measurable resource limits, and separated stages from symbol resolution to validation and benchmarking.",
         overview: [
           "LightVM is a virtual machine built in Rust around explicit instruction dispatch, a lean memory footprint, and host-configured security boundaries and quotas. Its pipeline separates core execution concerns from optional and diagnostic tooling so each stage stays predictable and easy to reason about.",

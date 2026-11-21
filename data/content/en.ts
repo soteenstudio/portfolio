@@ -138,6 +138,7 @@ export const en: Dictionary = {
     overview: "Overview",
     highlights: "Key highlights",
     stack: "Tech stack",
+    links: "Links",
     status: "Status",
     ctaTitle: "Want to try it or collaborate?",
     ctaDescription: "Share feedback, report an issue, or reach out if you want to build something together.",

@@ -69,6 +69,7 @@ export interface Dictionary {
     overview: string;
     highlights: string;
     stack: string;
+    links: string;
     status: string;
     ctaTitle: string;
     ctaDescription: string;

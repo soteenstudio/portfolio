@@ -138,6 +138,7 @@ export const id: Dictionary = {
     overview: "Ringkasan",
     highlights: "Sorotan utama",
     stack: "Teknologi",
+    links: "Tautan",
     status: "Status",
     ctaTitle: "Tertarik mencoba atau berkolaborasi?",
     ctaDescription: "Kirim masukan, laporkan bug, atau hubungi kami kalau mau ngobrol soal kolaborasi.",

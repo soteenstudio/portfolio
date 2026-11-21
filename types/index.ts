@@ -27,6 +27,7 @@ export interface StatDef {
 export interface ProjectContent {
   name: string;
   category: string;
+  links?: string[];
   summary: string;
   /** Satu paragraf (string) atau beberapa paragraf (string[]). */
   overview: string | string[];

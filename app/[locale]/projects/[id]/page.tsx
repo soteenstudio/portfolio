@@ -109,6 +109,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     ))}
                   </dd>
                 </div>
+                {text.links && text.links.length > 0 && (
+                  <div>
+                    <dt className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      {labels.links}
+                    </dt>
+                    <dd className="mt-2 flex flex-wrap gap-2">
+                      {text.links.map((item) => {
+                        const [rawLabel, url] = item.split(" ");
+                        const label = rawLabel.replaceAll("_", " ");
+
+                        return (
+                          <a
+                            key={url}
+                            href={url}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="rounded-full bg-secondary px-3 py-1 text-xs font-medium"
+                          >
+                            {label}
+                          </a>
+                        );
+                      })}
+                    </dd>
+                  </div>
+                )}
               </dl>
 
               <div className="border-t pt-6">
