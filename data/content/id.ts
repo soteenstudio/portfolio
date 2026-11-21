@@ -7,7 +7,7 @@ export const id: Dictionary = {
       "SoTeen Studio merancang dan membangun produk digital, platform, dan identitas merek yang jelas, andal, dan berdampak.",
   },
   site: {
-    tagline: "Studio digital untuk produk yang dibangun dengan teliti.",
+    tagline: "Studio independen yang membangun game, perangkat lunak terbuka, dan eksperimen teknis.",
     description:
       "SoTeen Studio merancang dan membangun produk digital, platform, dan identitas merek yang jelas, andal, dan berdampak.",
     address: "Denpasar, Bali, Indonesia (alamat lengkap menyusul)",
@@ -40,7 +40,7 @@ export const id: Dictionary = {
     primaryCta: "Lihat Proyek",
     secondaryCta: "Hubungi Kami",
     stats: {
-      disciplines: "Disiplin inti",
+      focus: "Area fokus",
       products: "Produk dalam ekosistem",
       values: "Nilai inti",
     },
@@ -184,7 +184,7 @@ export const id: Dictionary = {
   footer: {
     ecosystem: "Ekosistem",
     rights: "Hak cipta dilindungi.",
-    legalNotice: "Informasi badan hukum PT akan diperbarui setelah proses pendirian resmi selesai.",
+    legalNotice: "Ketentuan penggunaan dan lisensi setiap proyek mengikuti aturan masing-masing rilis.",
     links: {
       privacy: "Kebijakan Privasi",
       terms: "Syarat & Ketentuan",

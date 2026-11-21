@@ -9,7 +9,7 @@ export type ProjectStatus = "live" | "beta" | "in-development" | "planned";
 export type ValueId = "open" | "experimental" | "efficient" | "independent";
 export type ServiceId = "experiment" | "game" | "opensource" | "product";
 export type RoleId = "gameDesigner" | "systemsEngineer" | "maintainerQa";
-export type StatId = "disciplines" | "products" | "values";
+export type StatId = "focus" | "products" | "values";
 export type FactId = "location" | "focus" | "form" | "model";
 export type LegalId = "privacy" | "terms" | "cookies";
 

@@ -7,7 +7,7 @@ export const en: Dictionary = {
       "SoTeen Studio designs and builds digital products, platforms, and brand identities that are clear, reliable, and impactful.",
   },
   site: {
-    tagline: "A digital studio for products built with care.",
+    tagline: "An independent studio building games, open-source tools, and experiments.",
     description:
       "SoTeen Studio designs and builds digital products, platforms, and brand identities that are clear, reliable, and impactful.",
     address: "Denpasar, Bali, Indonesia (full address coming soon)",
@@ -40,7 +40,7 @@ export const en: Dictionary = {
     primaryCta: "View Projects",
     secondaryCta: "Contact Us",
     stats: {
-      disciplines: "Core disciplines",
+      focus: "Focus areas",
       products: "Products in the ecosystem",
       values: "Core values",
     },
@@ -184,7 +184,7 @@ export const en: Dictionary = {
   footer: {
     ecosystem: "Ecosystem",
     rights: "All rights reserved.",
-    legalNotice: "Business entity (PT) information will be updated once the official incorporation process is complete.",
+    legalNotice: "Usage terms and licenses for each project follow the rules of each release.",
     links: {
       privacy: "Privacy Policy",
       terms: "Terms & Conditions",

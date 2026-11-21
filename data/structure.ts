@@ -63,7 +63,7 @@ export const services: ServiceDef[] = [
 export const careerRoles: RoleId[] = ["gameDesigner", "systemsEngineer", "maintainerQa"];
 
 export const heroStats: StatDef[] = [
-  { id: "disciplines", value: "3" },
+  { id: "focus", value: "3" },
   { id: "products", value: String(projects.length) },
   { id: "values", value: String(coreValues.length) },
 ];
