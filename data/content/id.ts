@@ -23,12 +23,12 @@ export const id: Dictionary = {
     cta: "Mulai Diskusi",
     groups: { studio: "Studio", work: "Karya" },
     sections: {
-      about: { label: "Tentang Kami", description: "Cerita, visi, dan misi kami." },
-      values: { label: "Nilai Inti", description: "Prinsip yang memandu keputusan kami." },
-      careers: { label: "Karier", description: "Bergabung atau berkolaborasi dengan kami." },
-      services: { label: "Layanan", description: "Dari strategi hingga peluncuran." },
-      projects: { label: "Proyek", description: "Ekosistem produk dan studi kasus." },
-      contact: { label: "Kontak", description: "Mulai percakapan dengan tim kami." },
+      about: { label: "Tentang Kami", description: "Cerita, visi, dan misi studio kami." },
+      values: { label: "Nilai Inti", description: "Prinsip di balik setiap karya yang kami rilis." },
+      careers: { label: "Karier & Kolaborasi", description: "Ikut bereksperimen dan membangun bersama kami." },
+      services: { label: "Fokus Karya", description: "Dari eksperimen bebas hingga rilis ke publik." },
+      projects: { label: "Proyek", description: "Game, perangkat lunak terbuka, dan hasil eksperimen studio." },
+      contact: { label: "Kontak", description: "Terhubung dan berdiskusi dengan tim kami." },
     },
   },
   hero: {

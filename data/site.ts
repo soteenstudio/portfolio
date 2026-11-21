@@ -219,8 +219,8 @@ export const legalInfo = {
   registration: "NIB: 0000000000000 · NPWP: 00.000.000.0-000.000",
   notice: "Data legalitas di atas hanyalah placeholder.",
   links: [
-    { label: "Kebijakan Privasi", href: "#" },
-    { label: "Syarat & Ketentuan", href: "#" },
-    { label: "Kebijakan Cookie", href: "#" },
+    { label: "Kebijakan Privasi", href: "https://policies.soteenstudio.my.id/privacy" },
+    { label: "Syarat & Ketentuan", href: "https://policies.soteenstudio.my.id/terms" },
+    { label: "Kebijakan Cookie", href: "https://policies.soteenstudio.my.id/cookies" },
   ],
 } as const;

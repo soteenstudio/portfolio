@@ -75,7 +75,7 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const legalLinks: LegalLink[] = [
-  { id: "privacy", href: "#" },
-  { id: "terms", href: "#" },
-  { id: "cookies", href: "#" },
+  { id: "privacy", href: "https://policies.soteenstudio.my.id/privacy" },
+  { id: "terms", href: "https://policies.soteenstudio.my.id/terms" },
+  { id: "cookies", href: "https://policies.soteenstudio.my.id/cookies" },
 ];

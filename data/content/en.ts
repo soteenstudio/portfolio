@@ -23,12 +23,12 @@ export const en: Dictionary = {
     cta: "Start a Conversation",
     groups: { studio: "Studio", work: "Work" },
     sections: {
-      about: { label: "About Us", description: "Our story, vision, and mission." },
-      values: { label: "Core Values", description: "The principles behind our decisions." },
-      careers: { label: "Careers", description: "Join or collaborate with us." },
-      services: { label: "Services", description: "From strategy to launch." },
-      projects: { label: "Projects", description: "Our product ecosystem and case studies." },
-      contact: { label: "Contact", description: "Start a conversation with our team." },
+      about: { label: "About Us", description: "Our studio story, vision, and mission." },
+      values: { label: "Core Values", description: "The principles behind everything we ship." },
+      careers: { label: "Careers & Collaboration", description: "Experiment and build alongside us." },
+      services: { label: "What We Build", description: "From freeform experiments to public releases." },
+      projects: { label: "Projects", description: "Games, open-source software, and curated studio experiments." },
+      contact: { label: "Contact", description: "Get in touch with our team." },
     },
   },
   hero: {
