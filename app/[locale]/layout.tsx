@@ -14,6 +14,8 @@ import "../globals.css";
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 
+const BASE_URL = "https://soteenstudio.my.id";
+
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -29,10 +31,31 @@ export async function generateMetadata({ params }: Pick<LocaleLayoutProps, "para
   const dict = getDictionary(locale);
 
   return {
-    title: { default: dict.meta.title, template: `%s | ${siteName}` },
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: dict.meta.title,
+      template: `%s | ${siteName}`,
+    },
     description: dict.meta.description,
     alternates: {
+      canonical: `/${locale}`,
       languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+    },
+    openGraph: {
+      title: dict.meta.title,
+      description: dict.meta.description,
+      url: `/${locale}`,
+      siteName,
+      locale: locale === "id" ? "id_ID" : "en_US",
+      type: "website",
+      // kalau udah punya gambar OG, tambahin:
+      // images: [{ url: "/og-image.png", width: 1200, height: 630, alt: siteName }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.title,
+      description: dict.meta.description,
+      // images: ["/og-image.png"],
     },
   };
 }

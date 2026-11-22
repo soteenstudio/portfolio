@@ -23,8 +23,30 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const { locale, id } = await params;
   const project = getProject(id);
   if (!isLocale(locale) || !project) return {};
+
   const text = project.content[locale];
-  return { title: text.name, description: text.summary };
+  const path = `/${locale}/projects/${project.id}`;
+
+  return {
+    title: text.name,
+    description: text.summary,
+    alternates: {
+      canonical: path,
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}/projects/${project.id}`])),
+    },
+    openGraph: {
+      title: text.name,
+      description: text.summary,
+      url: path,
+      locale: locale === "id" ? "id_ID" : "en_US",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: text.name,
+      description: text.summary,
+    },
+  };
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
