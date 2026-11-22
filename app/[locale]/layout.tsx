@@ -10,73 +10,64 @@ import { siteName } from "@/data/structure";
 import { isLocale, locales } from "@/i18n/config";
 import { themeInitScript } from "@/lib/theme";
 import "../globals.css";
-
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-display", display: "swap" });
-
 const BASE_URL = "https://soteenstudio.my.id";
-
 interface LocaleLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+    children: React.ReactNode;
+    params: Promise<{
+        locale: string;
+    }>;
 }
-
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+    return locales.map((locale) => ({ locale }));
 }
-
 export async function generateMetadata({ params }: Pick<LocaleLayoutProps, "params">): Promise<Metadata> {
-  const { locale } = await params;
-  if (!isLocale(locale)) return {};
-  const dict = getDictionary(locale);
-
-  return {
-    metadataBase: new URL(BASE_URL),
-    title: {
-      default: dict.meta.title,
-      template: `%s | ${siteName}`,
-    },
-    description: dict.meta.description,
-    alternates: {
-      canonical: `/${locale}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
-    },
-    openGraph: {
-      title: dict.meta.title,
-      description: dict.meta.description,
-      url: `/${locale}`,
-      siteName,
-      locale: locale === "id" ? "id_ID" : "en_US",
-      type: "website",
-      // kalau udah punya gambar OG, tambahin:
-      // images: [{ url: "/og-image.png", width: 1200, height: 630, alt: siteName }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: dict.meta.title,
-      description: dict.meta.description,
-      // images: ["/og-image.png"],
-    },
-  };
+    const { locale } = await params;
+    if (!isLocale(locale))
+        return {};
+    const dict = getDictionary(locale);
+    return {
+        metadataBase: new URL(BASE_URL),
+        title: {
+            default: dict.meta.title,
+            template: `%s | ${siteName}`,
+        },
+        description: dict.meta.description,
+        alternates: {
+            canonical: `/${locale}`,
+            languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+        },
+        openGraph: {
+            title: dict.meta.title,
+            description: dict.meta.description,
+            url: `/${locale}`,
+            siteName,
+            locale: locale === "id" ? "id_ID" : "en_US",
+            type: "website",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: dict.meta.title,
+            description: dict.meta.description,
+        },
+    };
 }
-
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { locale } = await params;
-  if (!isLocale(locale)) notFound();
-  const dict = getDictionary(locale);
-
-  return (
-    <html lang={locale} className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
+    const { locale } = await params;
+    if (!isLocale(locale))
+        notFound();
+    const dict = getDictionary(locale);
+    return (<html lang={locale} className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }}/>
       </head>
       <body>
         <ThemeSync />
         <ScrollReveal />
-        <Navbar locale={locale} copy={dict.nav} />
+        <Navbar locale={locale} copy={dict.nav}/>
         <main>{children}</main>
-        <Footer locale={locale} dict={dict} />
+        <Footer locale={locale} dict={dict}/>
       </body>
-    </html>
-  );
+    </html>);
 }
