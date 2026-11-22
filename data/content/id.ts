@@ -1,7 +1,7 @@
 import type { Dictionary } from "./types";
 export const id: Dictionary = {
     meta: {
-        title: "SoTeen Studio | Profil Studio",
+        title: "Profil Studio",
         description: "SoTeen Studio merancang dan membangun produk digital, platform, dan identitas merek yang jelas, andal, dan berdampak.",
     },
     site: {

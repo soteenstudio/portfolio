@@ -1,7 +1,7 @@
 import type { Dictionary } from "./types";
 export const en: Dictionary = {
     meta: {
-        title: "SoTeen Studio | Studio Profile",
+        title: "Studio Profile",
         description: "SoTeen Studio designs and builds digital products, platforms, and brand identities that are clear, reliable, and impactful.",
     },
     site: {
