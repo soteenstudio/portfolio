@@ -177,7 +177,7 @@ export const id: Dictionary = {
     footer: {
         ecosystem: "Ekosistem",
         rights: "Hak cipta dilindungi.",
-        legalNotice: "Ketentuan penggunaan dan lisensi setiap proyek mengikuti aturan masing-masing rilis.",
+        legalNotice: "Dokumen di situs ini berlaku untuk layanan SoTeen Studio. Ketentuan penggunaan dan lisensi untuk tiap proyek mengikuti aturan masing-masing rilis.",
         links: {
             privacy: "Kebijakan Privasi",
             terms: "Syarat & Ketentuan",

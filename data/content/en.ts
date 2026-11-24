@@ -177,7 +177,7 @@ export const en: Dictionary = {
     footer: {
         ecosystem: "Ecosystem",
         rights: "All rights reserved.",
-        legalNotice: "Usage terms and licenses for each project follow the rules of each release.",
+        legalNotice: "The documents on this site apply to SoTeen Studio services. Usage terms and licenses for each project follow the rules of each release.",
         links: {
             privacy: "Privacy Policy",
             terms: "Terms & Conditions",
